@@ -1,0 +1,14 @@
+version: '3.8'
+name: aws-cicd
+
+services:
+  nextjs:
+    container_name: container
+    build:  
+      context: .
+      dockerfile: Dockerfile.local
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+      - /app/node_modules  
