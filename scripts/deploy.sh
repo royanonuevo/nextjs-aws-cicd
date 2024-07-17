@@ -4,12 +4,7 @@ sudo -i bash <<EOF
 echo "***********************************"
 echo "Navigate to the docker folder"
 echo "***********************************"
-cd /home/ubuntu/docker
-
-echo "***********************************"
-echo "Login to AWS ECR"
-echo "***********************************"
-aws ecr get-login-password --region <region> | docker login --username AWS --password-stdin <account_id>.dkr.ecr.<region>.amazonaws.com
+cd /root/docker
 
 echo "***********************************"
 echo "Stop the application"
