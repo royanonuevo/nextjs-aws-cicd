@@ -55,4 +55,4 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           # port: ${{ secrets.SSH_PORT }}
-          script: sh /root/scripts/deploy.sh
+          script: sh /home/ubuntu/scripts/deploy.sh
