@@ -4,7 +4,7 @@ sudo -i bash <<EOF
 echo "***********************************"
 echo "Navigate to the docker folder"
 echo "***********************************"
-cd /root/docker
+cd /home/ubuntu
 
 echo "***********************************"
 echo "Stop the application"
