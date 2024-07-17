@@ -30,7 +30,7 @@ jobs:
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/aws-cicd:latest
 
   deploy:
-    #needs: [build-and-push]
+    needs: [build-and-push]
     name: deploy image
     runs-on: ubuntu-latest
     steps:
