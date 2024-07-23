@@ -45,6 +45,12 @@ jobs:
         name: Login to Amazon ECR
         run: |
           aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
+      -
+        name: Remove all Images
+        uses: LeiaInc/devops-delete-old-aws-ecr-images@v1
+        with:
+          repo-name: ecr-name-service
+          qtd-images: 1
       - 
         name: Build and push Docker image
         run: |
