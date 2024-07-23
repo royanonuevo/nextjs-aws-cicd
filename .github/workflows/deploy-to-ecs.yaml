@@ -21,17 +21,17 @@ jobs:
       - 
         name: Checkout
         uses: actions/checkout@v3
-      - 
-        name: Set up QEMU for arm64
-        run: |
-          docker run --rm --privileged multiarch/aws-cicd-nextjs --reset -p yes
-        if: runner.os == 'Linux'
-      - 
-        name: Set up Docker for arm64
-        uses: docker/setup-qemu-action@v2
-        with:
-          platforms: linux/arm64
-      - 
+      # - 
+      #   name: Set up QEMU for arm64
+      #   run: |
+      #     docker run --rm --privileged multiarch/aws-cicd-nextjs --reset -p yes
+      #   if: runner.os == 'Linux'
+      # - 
+      #   name: Set up Docker for arm64
+      #   uses: docker/setup-qemu-action@v2
+      #   with:
+      #     platforms: linux/arm64
+      # - 
         name: Set up Docker
         uses: docker/setup-buildx-action@v3
       - 
